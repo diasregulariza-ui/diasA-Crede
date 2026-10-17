@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dias A&C — Serviços Cartorários</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+:root{--gold:#e9b900;--white:#f7f7f5;--muted:#b8b8b8;--black:#050505}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#111;color:var(--white);font-family:Inter,Arial,sans-serif}
+body{display:grid;place-items:center;padding:20px}
+.stage{position:relative;isolation:isolate;overflow:hidden;width:min(100%,720px);aspect-ratio:3/4;background:radial-gradient(ellipse at 80% 55%,#171717 0%,#080808 48%,#030303 100%);padding:9% 10%;display:flex;flex-direction:column;justify-content:space-between}
+.stage:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;background:repeating-linear-gradient(115deg,transparent 0 65px,#222 66px,#222 67px,transparent 68px 130px)}
+.topline{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;animation:fade .8s both}
+.topline:after{content:"";height:1px;background:#666;flex:1}
+.brand{font-size:clamp(25px,5vw,42px);font-weight:700;letter-spacing:-.06em;line-height:1;animation:rise .9s .2s both}
+.brand span{color:var(--gold)}
+.hero{margin-top:10%;font-size:clamp(42px,8vw,76px);line-height:.99;letter-spacing:-.065em;font-weight:200;max-width:95%;animation:rise 1s .35s both}
+.hero strong{font-weight:700}
+.goldbar{width:72px;height:6px;background:var(--gold);margin:28px 0;animation:expand .8s .7s both;transform-origin:left}
+.sub{max-width:90%;font-size:clamp(17px,3vw,25px);line-height:1.35;font-weight:300;color:#c6c6c6;animation:fade 1s .75s both}
+.sub b{font-weight:500;color:white}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:34px}
+.step{border-top:1px solid #555;padding-top:12px;font-size:clamp(12px,2vw,16px);line-height:1.35;color:#c8c8c8;animation:rise .8s both}
+.step:nth-child(2){animation-delay:.2s}.step:nth-child(3){animation-delay:.35s}.step:nth-child(4){animation-delay:.5s}
+.num{display:block;color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.1em;margin-bottom:7px}
+.footer{display:flex;justify-content:space-between;align-items:end;border-top:1px solid #393939;padding-top:17px;margin-top:38px;gap:14px;animation:fade 1s 1s both}
+.footer small{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9b9b9b}
+.footer strong{font-size:clamp(13px,2.4vw,19px);font-weight:500}
+.arrow{color:var(--gold);font-size:30px;line-height:1;animation:point 1.8s infinite}
+.orbit{position:absolute;width:65%;aspect-ratio:1;border:1px solid #a8891d2c;border-radius:50%;right:-34%;top:35%;z-index:-1;animation:rotate 18s linear infinite}
+.orbit:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--gold);top:12%;left:15%;box-shadow:0 0 20px #e9b900}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}@keyframes expand{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes point{0%,100%{transform:translateX(0)}50%{transform:translateX(7px)}}@keyframes rotate{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+</style>
+</head>
+<body>
+<main class="stage" aria-label="Apresentação animada Dias A&C">
+<div class="orbit"></div>
+<div class="topline">Consultoria documental • Brasil</div>
+<section>
+<div class="brand">DIAS <span>A&C</span></div>
+<div class="hero">Documentos<br>em ordem.<br><strong>Caminhos<br>mais simples.</strong></div>
+<div class="goldbar"></div>
+<div class="sub">Serviços cartorários e documentais com <b>orientação, clareza e segurança</b> em cada etapa.</div>
+<div class="steps">
+<div class="step"><span class="num">01 /</span>Preparação e análise de documentos</div>
+<div class="step"><span class="num">02 /</span>Certidões, registros e transferências</div>
+<div class="step"><span class="num">03 /</span>Contratos e instrumentos particulares</div>
+<div class="step"><span class="num">04 /</span>Suporte em processos burocráticos</div>
+</div>
+</section>
+<footer class="footer"><div><small>DIAS A&C SERVIÇOS CARTORÁRIOS</small><br><strong>Simplificando seus documentos.</strong></div><div class="arrow">↗</div></footer>
+</main>
+</body>
+</html>
